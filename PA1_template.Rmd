@@ -50,7 +50,7 @@ The interval with the maximum number of steps on average is `r maxInterval`
 
 
 ## Imputing missing value
-The number of missing values in the measurements is calculated. These values are then filled with the average value for that period.
+The number of missing values in the measurements is calculated. The average steps for each time interval is calculated and is used to replace the missing values. This will compensate for the lack of data more accurately.
 ```{r removeMissing}
 numMissingVal <- length(which(is.na(actData$steps)))
 actDataNew <- actData

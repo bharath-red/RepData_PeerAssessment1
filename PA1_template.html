@@ -256,7 +256,7 @@ maxInterval &lt;- intervalLevels[maxIntervalIndex]
 
 <h2>Imputing missing value</h2>
 
-<p>The number of missing values in the measurements is calculated. These values are then filled with the average value for that period.</p>
+<p>The number of missing values in the measurements is calculated. The average steps for each time interval is calculated and is used to replace the missing values. This will compensate for the lack of data more accurately.</p>
 
 <pre><code class="r">numMissingVal &lt;- length(which(is.na(actData$steps)))
 actDataNew &lt;- actData
